@@ -38,6 +38,12 @@ body{
     pointer-events: none;
 }
 
+#menu-icon{
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #f06, #3cf);
+    display: none;
+}
+
 
 .navbar a{
     font-size: 18px;
@@ -166,6 +172,12 @@ h2.titulo{
 
 .sobre{
     padding: 40px 4%;
+    display: flex;
+    padding: 6rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: #080808;
 }
 
 .flex{
@@ -341,5 +353,97 @@ margin-bottom: 1.5rem;
 .botao-form:hover {
 transform: translateY(-4px);
 box-shadow: 0 15px rgb(79, 70, 229, 0.4);
+}
+
+
+
+
+/* ============================= */
+/* RESPONSIVO PARA CELULAR */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        padding: 1rem 5%;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #080808;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+        font-size: 18px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    /* HOME */
+    .home {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 120px 5% 50px;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-img {
+        width: 260px;
+        height: 260px;
+        margin-top: 30px;
+    }
+
+    .imagem img {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* SOBRE MIM */
+    .sobre {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .sobre-img img {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* HABILIDADES */
+    .skills-box {
+        width: 90%;
+        padding: 2rem 1rem;
+    }
+
+    /* PROJECTOS */
+    .PROJECTOS-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    /* CONTACTO */
+    .contact-container {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 
